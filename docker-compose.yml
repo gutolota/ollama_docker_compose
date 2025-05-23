@@ -1,0 +1,15 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    attach: false
+    container_name: ollama_experiments
+    volumes:
+      - ~/.ollama_models:/root/.ollama
+    restart: no
+    ports:
+      - 11434:11434
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
