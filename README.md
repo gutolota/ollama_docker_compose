@@ -15,12 +15,12 @@ bash start-ollama.sh
 
 #### Instalar um modelo usando a REST API (POST)
 ```
-curl http://localhost:11434/api/create -d {"name": "<NOME_MODELO (OPCIONAL)>", "from": "<ID DO MODELO USADO (NECESSÁRIO SE NÃO ESTIVER USANDO MODELFILE)>", "modelfile": "<ARQUIVO DE MODELO (OPCIONAL)>"}
+curl http://localhost:11434/api/create -d {"name": "<NOME_MODELO>", "from": "<ID DO MODELO USADO (NECESSÁRIO SE NÃO ESTIVER USANDO MODELFILE)>", "modelfile": "<ARQUIVO DE MODELO (OPCIONAL)>"}
 ```
 
 Exemplo:
 ```
-curl http://localhost:11434/api/create -d {"from": "gemma3:4b-it-q4_0"}
+curl http://localhost:11434/api/create -d {"name": "gemma3:4b-it-q4_0", "from": "gemma3:4b-it-q4_0"}
 ```
 
 #### Inferência em um modelo usando a REST API (POST)
